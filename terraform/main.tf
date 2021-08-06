@@ -15,6 +15,8 @@ resource "aws_s3_bucket" "s3-bucket" {
     Environment = "Sandbox"
   }
 
+  # Remove lifecycle_rule if you plan to use the S3 bucket long term.
+
   lifecycle_rule {
     id      = "log"
     enabled = true
