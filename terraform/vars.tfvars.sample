@@ -1,0 +1,6 @@
+# Copy this file to vars.tfgvars and adapt the variables as needed.
+
+aws_region   = "eu-west-1"
+project_name = "Interesting Project Name"
+team         = "Team X"
+bucket_name  = "amazing-static-site.com"
