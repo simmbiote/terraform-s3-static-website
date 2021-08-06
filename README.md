@@ -30,14 +30,15 @@ This terraform setup will provision:
 ## Provisioning AWS Infrastructure and Deploying
 
 1. In the /terraform/ directory, copy vars.tfvars.sample to vars.tfvars and adapt the variables.
-2. Use the /html/ folder for your static html site. This must include a /index.html and /error.html
-3. In the /terraform/ folder, run `terraform init` the first time.
-4. Run `terraform plan -var-file="vars.tfvars"` to do a dry run.
-5. If satisfied, run `terraform apply -var-file="vars.tfvars"`.
+2. Use the /html/ folder for your static html site. This must include a /index.html and /error.html.
+3. If you want to use the static website feature of S3, uncomment the resources described in main.tf.
+4. In the /terraform/ folder, run `terraform init` the first time.
+5. Run `terraform plan -var-file="vars.tfvars"` to do a dry run.
+6. If satisfied, run `terraform apply -var-file="vars.tfvars"`.
 
 Once complete you will be given the S3 Bucket Website URL in the command output.
 
-When you want to deploy changes, repeat step 5.
+When you want to deploy changes, repeat step 6.
 
 Remember to delete your prototype when you no longer need it:  
 Run `terraform destroy -var-file="vars.tfvars"` from the /terraform/ folder.
